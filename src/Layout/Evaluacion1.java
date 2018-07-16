@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -25,6 +26,7 @@ public class Evaluacion1 extends Application {
 //Interfaz
     //Text
         javafx.scene.control.TextField Pantalla = new javafx.scene.control.TextField("0");
+        Pantalla.setAlignment(Pos.CENTER_RIGHT);
         //Botones
         javafx.scene.control.Button BotonLimpiarTodo = new javafx.scene.control.Button("Limpiar Todo");BotonLimpiarTodo.setPrefSize(100,50);
         javafx.scene.control.Button BotonLimpiar = new javafx.scene.control.Button("C");BotonLimpiar.setPrefSize(45,45);
@@ -72,6 +74,7 @@ public class Evaluacion1 extends Application {
         });
         Layout.add(BotonLimpiar,2,1);
         BotonLimpiar.setOnAction(event -> {
+            Pantalla.setText("0");
 
         });
         Layout.add(Dividir,3,1);
@@ -181,11 +184,11 @@ public class Evaluacion1 extends Application {
         });
         Layout.add(Punto,2,5);
         Punto.setOnAction(event -> {
-            if (Pantalla.getText().equalsIgnoreCase("0")){
-            Pantalla.setText(".");}
-            else{
-                Pantalla.setText(Pantalla.getText());
-            }
+            if (Pantalla.getText().contains(".")==false){
+                Pantalla.setText(Pantalla.getText()+".");}
+                else{
+            Pantalla.setText(Pantalla.getText()+".");
+        }
         });
         Layout.add(BotonResultado,3,5);
         BotonResultado.setOnAction(event -> {

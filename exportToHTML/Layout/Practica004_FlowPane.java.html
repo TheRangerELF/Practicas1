@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Practica004_FlowPane.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Practica004_FlowPane.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">Layout; 
+ 
+</span><span class="s0">import </span><span class="s1">javafx.application.Application; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Insets; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Orientation; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Pos; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.VerticalDirection; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.Scene; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.control.Button; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.layout.FlowPane; 
+</span><span class="s0">import </span><span class="s1">javafx.stage.Stage; 
+ 
+</span><span class="s0">import </span><span class="s1">java.awt.*; 
+ 
+</span><span class="s0">public class </span><span class="s1">Practica004_FlowPane </span><span class="s0">extends </span><span class="s1">Application { 
+    </span><span class="s0">public static void </span><span class="s1">main (String [] args) { 
+ 
+        launch(args) ; 
+    } 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">start(Stage primaryStage) </span><span class="s0">throws </span><span class="s1">Exception { 
+</span><span class="s2">//Interfaz</span><span class="s1"> 
+        Button Boton1 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Boton1&quot;</span><span class="s1">); 
+        Button Boton2 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Boton2&quot;</span><span class="s1">); 
+        Button Boton3 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Boton3&quot;</span><span class="s1">); 
+        Button Boton4 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Boton4&quot;</span><span class="s1">); 
+        Button Boton5 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Boton5&quot;</span><span class="s1">); 
+</span><span class="s2">//Panel</span><span class="s1"> 
+        FlowPane Layout = </span><span class="s0">new </span><span class="s1">FlowPane(); 
+        Layout.setAlignment(Pos.CENTER); 
+        Layout.setPadding(</span><span class="s0">new </span><span class="s1">Insets(</span><span class="s4">10</span><span class="s1">)); 
+        Layout.setVgap(</span><span class="s4">10</span><span class="s1">); 
+        Layout.setHgap(</span><span class="s4">10</span><span class="s1">); 
+        Layout.getChildren().addAll(Boton1,Boton2,Boton3,Boton4,Boton5); 
+        Scene Escena = </span><span class="s0">new </span><span class="s1">Scene(Layout, </span><span class="s4">400</span><span class="s1">,</span><span class="s4">400</span><span class="s1">); 
+</span><span class="s2">//Mostrar Interfaz</span><span class="s1"> 
+        primaryStage.setScene(Escena); 
+        primaryStage.show(); 
+    } 
+} 
+</span></pre>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Practica006_GridPane.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Practica006_GridPane.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">Layout; 
+ 
+</span><span class="s0">import </span><span class="s1">javafx.application.Application; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Insets; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.Scene; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.control.Button; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.layout.GridPane; 
+</span><span class="s0">import </span><span class="s1">javafx.stage.Stage; 
+ 
+</span><span class="s0">public class </span><span class="s1">Practica006_GridPane </span><span class="s0">extends </span><span class="s1">Application { 
+    </span><span class="s0">public static void </span><span class="s1">main (String [] args) { 
+ 
+        launch(args) ; 
+    } 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">start(Stage primaryStage) </span><span class="s0">throws </span><span class="s1">Exception { 
+ 
+        GridPane Layout = </span><span class="s0">new </span><span class="s1">GridPane(); 
+ 
+        Layout.add(</span><span class="s0">new </span><span class="s1">Button(</span><span class="s2">&quot;0,3&quot;</span><span class="s1">),</span><span class="s3">0</span><span class="s1">,</span><span class="s3">3</span><span class="s1">); 
+        Layout.add(</span><span class="s0">new </span><span class="s1">Button(</span><span class="s2">&quot;1,0&quot;</span><span class="s1">),</span><span class="s3">1</span><span class="s1">,</span><span class="s3">0</span><span class="s1">); 
+        Layout.add(</span><span class="s0">new </span><span class="s1">Button(</span><span class="s2">&quot;2,1&quot;</span><span class="s1">),</span><span class="s3">2</span><span class="s1">,</span><span class="s3">1</span><span class="s1">); 
+        Layout.add(</span><span class="s0">new </span><span class="s1">Button(</span><span class="s2">&quot;2,2&quot;</span><span class="s1">),</span><span class="s3">2</span><span class="s1">,</span><span class="s3">2</span><span class="s1">); 
+        Layout.setPadding(</span><span class="s0">new </span><span class="s1">Insets(</span><span class="s3">10</span><span class="s1">)); 
+        Layout.setHgap(</span><span class="s3">10</span><span class="s1">); 
+        Layout.setVgap(</span><span class="s3">10</span><span class="s1">); 
+ 
+        Scene Escena = </span><span class="s0">new </span><span class="s1">Scene(Layout); 
+        primaryStage.setScene(Escena); 
+        primaryStage.show(); 
+ 
+    } 
+} 
+</span></pre>
+</body>
+</html>

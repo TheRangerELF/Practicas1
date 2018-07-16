@@ -1,0 +1,256 @@
+<html>
+<head>
+<title>Evaluacion1.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Evaluacion1.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">Layout; 
+ 
+</span><span class="s0">import </span><span class="s1">javafx.application.Application; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Insets; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Pos; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.Scene; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.control.TextField; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.layout.ColumnConstraints; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.layout.GridPane; 
+</span><span class="s0">import </span><span class="s1">javafx.stage.Stage; 
+ 
+</span><span class="s0">import </span><span class="s1">java.awt.*; 
+ 
+</span><span class="s0">public class </span><span class="s1">Evaluacion1 </span><span class="s0">extends </span><span class="s1">Application { 
+    </span><span class="s0">char </span><span class="s1">Cuenta; 
+    </span><span class="s0">public </span><span class="s1">Double V1; 
+    </span><span class="s0">public </span><span class="s1">Double V2; 
+    </span><span class="s0">public </span><span class="s1">Double Res; 
+    </span><span class="s0">public </span><span class="s1">Double Entero; 
+    </span><span class="s0">public static void </span><span class="s1">main(String[] args){ 
+        launch(args); 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">start(Stage primaryStage) </span><span class="s0">throws </span><span class="s1">Exception { 
+</span><span class="s2">//Interfaz</span><span class="s1"> 
+    </span><span class="s2">//Text</span><span class="s1"> 
+        javafx.scene.control.TextField Pantalla = </span><span class="s0">new </span><span class="s1">javafx.scene.control.TextField(</span><span class="s3">&quot;0&quot;</span><span class="s1">); 
+        Pantalla.setAlignment(Pos.CENTER_RIGHT); 
+        </span><span class="s2">//Botones</span><span class="s1"> 
+        javafx.scene.control.Button BotonLimpiarTodo = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;Limpiar Todo&quot;</span><span class="s1">);BotonLimpiarTodo.setPrefSize(</span><span class="s4">100</span><span class="s1">,</span><span class="s4">50</span><span class="s1">); 
+        javafx.scene.control.Button BotonLimpiar = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;C&quot;</span><span class="s1">);BotonLimpiar.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button BotonResultado = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;=&quot;</span><span class="s1">);BotonResultado.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Punto = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;.&quot;</span><span class="s1">);Punto.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Sumar = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;+&quot;</span><span class="s1">);Sumar.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Restar = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;-&quot;</span><span class="s1">);Restar.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Dividir = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;/&quot;</span><span class="s1">);Dividir.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Multiplicar = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;*&quot;</span><span class="s1">);Multiplicar.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton1 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;1&quot;</span><span class="s1">);Boton1.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton2 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;2&quot;</span><span class="s1">);Boton2.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton3 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;3&quot;</span><span class="s1">);Boton3.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton4 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;4&quot;</span><span class="s1">);Boton4.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton5 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;5&quot;</span><span class="s1">);Boton5.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton6 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;6&quot;</span><span class="s1">);Boton6.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton7 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;7&quot;</span><span class="s1">);Boton7.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton8 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;8&quot;</span><span class="s1">);Boton8.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton9 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;9&quot;</span><span class="s1">);Boton9.setPrefSize(</span><span class="s4">45</span><span class="s1">,</span><span class="s4">45</span><span class="s1">); 
+        javafx.scene.control.Button Boton0 = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;0&quot;</span><span class="s1">);Boton0.setPrefSize(</span><span class="s4">100</span><span class="s1">,</span><span class="s4">50</span><span class="s1">); 
+        Boton0.setAlignment(Pos.CENTER); 
+        Boton1.setAlignment(Pos.CENTER); 
+        Boton2.setAlignment(Pos.CENTER); 
+        Boton3.setAlignment(Pos.CENTER); 
+        Boton4.setAlignment(Pos.CENTER); 
+        Boton5.setAlignment(Pos.CENTER); 
+        Boton6.setAlignment(Pos.CENTER); 
+        Boton7.setAlignment(Pos.CENTER); 
+        Boton8.setAlignment(Pos.CENTER); 
+        Boton9.setAlignment(Pos.CENTER); 
+        Punto.setAlignment(Pos.CENTER); 
+        Sumar.setAlignment(Pos.CENTER); 
+        Restar.setAlignment(Pos.CENTER); 
+        Dividir.setAlignment(Pos.CENTER); 
+        Multiplicar.setAlignment(Pos.CENTER); 
+        BotonResultado.setAlignment(Pos.CENTER); 
+        BotonLimpiar.setAlignment(Pos.CENTER); 
+        BotonLimpiarTodo.setAlignment(Pos.CENTER); 
+</span><span class="s2">//Grafico</span><span class="s1"> 
+        GridPane Layout = </span><span class="s0">new </span><span class="s1">GridPane(); 
+        Layout.setPadding(</span><span class="s0">new </span><span class="s1">Insets(</span><span class="s4">10</span><span class="s1">)); 
+        Layout.add(Pantalla,</span><span class="s4">0</span><span class="s1">,</span><span class="s4">0</span><span class="s1">,</span><span class="s4">5</span><span class="s1">,</span><span class="s4">1</span><span class="s1">); 
+        Layout.add(BotonLimpiarTodo,</span><span class="s4">0</span><span class="s1">,</span><span class="s4">1</span><span class="s1">,</span><span class="s4">2</span><span class="s1">,</span><span class="s4">1</span><span class="s1">); 
+        BotonLimpiarTodo.setOnAction(event -&gt; { 
+            Pantalla.setText(</span><span class="s3">&quot;0&quot;</span><span class="s1">); 
+        }); 
+        Layout.add(BotonLimpiar,</span><span class="s4">2</span><span class="s1">,</span><span class="s4">1</span><span class="s1">); 
+        BotonLimpiar.setOnAction(event -&gt; { 
+            </span><span class="s0">if</span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+            Pantalla.setText(</span><span class="s3">&quot;0&quot;</span><span class="s1">);} 
+            </span><span class="s0">else</span><span class="s1">{ 
+             Pantalla.setText(Pantalla.getText()+V1); 
+            } 
+        }); 
+        Layout.add(Dividir,</span><span class="s4">3</span><span class="s1">,</span><span class="s4">1</span><span class="s1">); 
+        Dividir.setOnAction(event -&gt; { 
+            Cuenta =</span><span class="s3">'/'</span><span class="s1">; 
+            V1 = Double.valueOf(Pantalla.getText()); 
+            Pantalla.setText(</span><span class="s3">&quot;0&quot;</span><span class="s1">); 
+        }); 
+        Layout.add(Boton7,</span><span class="s4">0</span><span class="s1">,</span><span class="s4">2</span><span class="s1">); 
+        Boton7.setOnAction(event -&gt; { 
+        </span><span class="s0">if </span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+            Pantalla.setText(</span><span class="s3">&quot;7&quot;</span><span class="s1">);} 
+            </span><span class="s0">else </span><span class="s1">{ 
+            Pantalla.setText(Pantalla.getText()+</span><span class="s4">7</span><span class="s1">); 
+        } 
+    }); 
+        Layout.add(Boton8,</span><span class="s4">1</span><span class="s1">,</span><span class="s4">2</span><span class="s1">); 
+        Boton8.setOnAction(event -&gt; { 
+            </span><span class="s0">if </span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+            Pantalla.setText(</span><span class="s3">&quot;8&quot;</span><span class="s1">);} 
+            </span><span class="s0">else </span><span class="s1">{ 
+                Pantalla.setText(Pantalla.getText()+</span><span class="s4">8</span><span class="s1">); 
+            } 
+        }); 
+        Layout.add(Boton9,</span><span class="s4">2</span><span class="s1">,</span><span class="s4">2</span><span class="s1">); 
+        Boton9.setOnAction(event -&gt; { 
+            </span><span class="s0">if</span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+            Pantalla.setText(</span><span class="s3">&quot;9&quot;</span><span class="s1">);} 
+            </span><span class="s0">else</span><span class="s1">{ 
+                Pantalla.setText(Pantalla.getText()+</span><span class="s4">9</span><span class="s1">); 
+            } 
+        }); 
+        Layout.add(Multiplicar,</span><span class="s4">3</span><span class="s1">,</span><span class="s4">2</span><span class="s1">); 
+        Multiplicar.setOnAction(event -&gt; { 
+            Cuenta =</span><span class="s3">'*'</span><span class="s1">; 
+            V1 = Double.valueOf(Pantalla.getText()); 
+            Pantalla.setText(</span><span class="s3">&quot;0&quot;</span><span class="s1">); 
+        }); 
+        Layout.add(Boton4,</span><span class="s4">0</span><span class="s1">,</span><span class="s4">3</span><span class="s1">); 
+        Boton4.setOnAction(event -&gt; { 
+            </span><span class="s0">if</span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+            Pantalla.setText(</span><span class="s3">&quot;4&quot;</span><span class="s1">);} 
+            </span><span class="s0">else</span><span class="s1">{ 
+                Pantalla.setText(Pantalla.getText()+</span><span class="s4">4</span><span class="s1">); 
+            } 
+        }); 
+        Layout.add(Boton5,</span><span class="s4">1</span><span class="s1">,</span><span class="s4">3</span><span class="s1">); 
+        Boton5.setOnAction(event -&gt; { 
+            </span><span class="s0">if</span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+                Pantalla.setText(</span><span class="s3">&quot;5&quot;</span><span class="s1">);} 
+            </span><span class="s0">else</span><span class="s1">{ 
+                Pantalla.setText(Pantalla.getText()+</span><span class="s4">5</span><span class="s1">); 
+            } 
+        }); 
+        Layout.add(Boton6,</span><span class="s4">2</span><span class="s1">,</span><span class="s4">3</span><span class="s1">); 
+        Boton6.setOnAction(event -&gt; { 
+            </span><span class="s0">if</span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+                Pantalla.setText(</span><span class="s3">&quot;6&quot;</span><span class="s1">);} 
+            </span><span class="s0">else</span><span class="s1">{ 
+                Pantalla.setText(Pantalla.getText()+</span><span class="s4">6</span><span class="s1">); 
+            } 
+        }); 
+        Layout.add(Restar,</span><span class="s4">3</span><span class="s1">,</span><span class="s4">3</span><span class="s1">); 
+        Restar.setOnAction(event -&gt; { 
+                    Cuenta = </span><span class="s3">'-'</span><span class="s1">; 
+                    V1 = Double.valueOf(Pantalla.getText()); 
+                    Pantalla.setText(</span><span class="s3">&quot;0&quot;</span><span class="s1">); 
+                }); 
+        Layout.add(Boton1,</span><span class="s4">0</span><span class="s1">,</span><span class="s4">4</span><span class="s1">); 
+        Boton1.setOnAction(event -&gt; { 
+                    </span><span class="s0">if </span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+                        Pantalla.setText(</span><span class="s3">&quot;1&quot;</span><span class="s1">); } 
+                        </span><span class="s0">else </span><span class="s1">{ 
+                        Pantalla.setText(Pantalla.getText()+</span><span class="s4">1</span><span class="s1">); 
+                    } 
+                        }); 
+        Layout.add(Boton2,</span><span class="s4">1</span><span class="s1">,</span><span class="s4">4</span><span class="s1">); 
+        Boton2.setOnAction(event -&gt; { 
+                    </span><span class="s0">if </span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+                        Pantalla.setText(</span><span class="s3">&quot;2&quot;</span><span class="s1">);} 
+                        </span><span class="s0">else </span><span class="s1">{ 
+                        Pantalla.setText(Pantalla.getText() + </span><span class="s4">2</span><span class="s1">); 
+                    } 
+                        }); 
+        Layout.add(Boton3,</span><span class="s4">2</span><span class="s1">,</span><span class="s4">4</span><span class="s1">); 
+        Boton3.setOnAction(event -&gt; { 
+            </span><span class="s0">if</span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+                Pantalla.setText(</span><span class="s3">&quot;3&quot;</span><span class="s1">);} 
+                </span><span class="s0">else</span><span class="s1"> 
+                { 
+                Pantalla.setText(Pantalla.getText()+</span><span class="s4">3</span><span class="s1">); 
+            } 
+        }); 
+        Layout.add(Sumar,</span><span class="s4">3</span><span class="s1">,</span><span class="s4">4</span><span class="s1">); 
+        Sumar.setOnAction(event -&gt; { 
+            Cuenta =</span><span class="s3">'+'</span><span class="s1">; 
+            V1 = Double.valueOf(Pantalla.getText()); 
+            Pantalla.setText(</span><span class="s3">&quot;0&quot;</span><span class="s1">); 
+        }); 
+        Layout.add(Boton0,</span><span class="s4">0</span><span class="s1">,</span><span class="s4">5</span><span class="s1">,</span><span class="s4">2</span><span class="s1">,</span><span class="s4">1</span><span class="s1">); 
+        Boton0.setOnAction(event -&gt; { 
+            </span><span class="s0">if</span><span class="s1">(Pantalla.getText().equalsIgnoreCase(</span><span class="s3">&quot;0&quot;</span><span class="s1">)){ 
+            Pantalla.setText(</span><span class="s3">&quot;0&quot;</span><span class="s1">);} 
+            </span><span class="s0">else</span><span class="s1">{ 
+                Pantalla.setText(Pantalla.getText()+</span><span class="s4">0</span><span class="s1">); 
+            } 
+        }); 
+        Layout.add(Punto,</span><span class="s4">2</span><span class="s1">,</span><span class="s4">5</span><span class="s1">); 
+        Punto.setOnAction(event -&gt; { 
+            </span><span class="s0">if </span><span class="s1">(Pantalla.getText().contains(</span><span class="s3">&quot;.&quot;</span><span class="s1">)==</span><span class="s0">false</span><span class="s1">) 
+                Pantalla.setText(Pantalla.getText()+</span><span class="s3">&quot;.&quot;</span><span class="s1">); 
+ 
+        }); 
+        Layout.add(BotonResultado,</span><span class="s4">3</span><span class="s1">,</span><span class="s4">5</span><span class="s1">); 
+        BotonResultado.setOnAction(event -&gt; { 
+            </span><span class="s0">switch </span><span class="s1">(Cuenta) { 
+                </span><span class="s0">case </span><span class="s3">'+'</span><span class="s1">: 
+                    V2 = Double.valueOf(Pantalla.getText()); 
+                    Res = V1 + V2; 
+                    Pantalla.setText(String.valueOf(Res)); 
+                    </span><span class="s0">break</span><span class="s1">; 
+            } 
+            </span><span class="s0">switch </span><span class="s1">(Cuenta) { 
+                </span><span class="s0">case</span><span class="s3">'*'</span><span class="s1">: 
+                    V2 = Double.valueOf(Pantalla.getText()); 
+                    Res = V1*V2; 
+                    Pantalla.setText(String.valueOf(Res)); 
+                    </span><span class="s0">break</span><span class="s1">; 
+            } 
+            </span><span class="s0">switch </span><span class="s1">(Cuenta) { 
+                </span><span class="s0">case</span><span class="s3">'-'</span><span class="s1">: 
+                    V2 = Double.valueOf(Pantalla.getText()); 
+                    Res = V1-V2; 
+                    Pantalla.setText(String.valueOf(Res)); 
+                    </span><span class="s0">break</span><span class="s1">; 
+            } 
+            </span><span class="s0">switch </span><span class="s1">(Cuenta) { 
+                </span><span class="s0">case</span><span class="s3">'/'</span><span class="s1">: 
+                    V2 = Double.valueOf(Pantalla.getText()); 
+                    Res = V1/V2; 
+                    Pantalla.setText(String.valueOf(Res)); 
+                    </span><span class="s0">break</span><span class="s1">; 
+            } 
+        }); 
+        Layout.setVgap(</span><span class="s4">10</span><span class="s1">); 
+        Layout.setHgap(</span><span class="s4">10</span><span class="s1">); 
+        </span><span class="s2">//Escena</span><span class="s1"> 
+        Scene Escena = </span><span class="s0">new </span><span class="s1">Scene(Layout); 
+        primaryStage.setTitle(</span><span class="s3">&quot;Calculadora&quot;</span><span class="s1">); 
+        primaryStage.setScene(Escena); 
+        primaryStage.show(); 
+    } 
+} 
+</span></pre>
+</body>
+</html>

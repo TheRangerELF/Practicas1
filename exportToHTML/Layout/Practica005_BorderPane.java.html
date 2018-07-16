@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Practica005_BorderPane.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Practica005_BorderPane.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">Layout; 
+ 
+</span><span class="s0">import </span><span class="s1">javafx.application.Application; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Insets; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Pos; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.Scene; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.control.Button; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.layout.BorderPane; 
+</span><span class="s0">import </span><span class="s1">javafx.stage.Stage; 
+ 
+</span><span class="s0">public class </span><span class="s1">Practica005_BorderPane </span><span class="s0">extends </span><span class="s1">Application { 
+    </span><span class="s0">public static void </span><span class="s1">main(String[] args) { 
+        launch(args); 
+    } 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">start(Stage primaryStage) </span><span class="s0">throws </span><span class="s1">Exception { 
+</span><span class="s2">//Interfaz</span><span class="s1"> 
+        Button Boton1 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Arriba&quot;</span><span class="s1">); 
+        Button Boton2 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Abajo&quot;</span><span class="s1">); 
+        Button Boton3 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Izquiera&quot;</span><span class="s1">); 
+        Button Boton4 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Derecha&quot;</span><span class="s1">); 
+        Button Boton5 = </span><span class="s0">new </span><span class="s1">Button(</span><span class="s3">&quot;Centro&quot;</span><span class="s1">); 
+</span><span class="s2">//Panel</span><span class="s1"> 
+        BorderPane Layout = </span><span class="s0">new </span><span class="s1">BorderPane(); 
+        Layout.setTop(Boton1); 
+        Layout.setBottom(Boton2); 
+        Layout.setLeft(Boton3); 
+        Layout.setRight(Boton4); 
+        Layout.setCenter(Boton5); 
+        BorderPane.setAlignment(Boton2, Pos.CENTER); 
+        BorderPane.setAlignment(Boton1, Pos.CENTER); 
+        BorderPane.setAlignment(Boton3, Pos.CENTER); 
+        BorderPane.setAlignment(Boton4, Pos.CENTER); 
+        Layout.setPadding(</span><span class="s0">new </span><span class="s1">Insets(</span><span class="s4">5</span><span class="s1">)); 
+</span><span class="s2">//Mostrar Interfaz</span><span class="s1"> 
+        Scene Escena = </span><span class="s0">new </span><span class="s1">Scene(Layout, </span><span class="s4">200</span><span class="s1">, </span><span class="s4">200</span><span class="s1">); 
+        primaryStage.setScene(Escena); 
+        primaryStage.show(); 
+    } 
+} 
+</span></pre>
+</body>
+</html>

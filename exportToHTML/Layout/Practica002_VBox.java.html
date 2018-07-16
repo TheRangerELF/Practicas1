@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Practica002_VBox.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Practica002_VBox.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">Layout; 
+ 
+</span><span class="s0">import </span><span class="s1">javafx.application.Application; 
+</span><span class="s0">import </span><span class="s1">javafx.geometry.Insets; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.Scene; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.layout.VBox; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.paint.Color; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.shape.Circle; 
+</span><span class="s0">import </span><span class="s1">javafx.scene.shape.Rectangle; 
+</span><span class="s0">import </span><span class="s1">javafx.stage.Stage; 
+ 
+</span><span class="s0">import </span><span class="s1">java.awt.*; 
+ 
+</span><span class="s0">public class </span><span class="s1">Practica002_VBox </span><span class="s0">extends </span><span class="s1">Application { 
+    </span><span class="s0">public static void </span><span class="s1">main (String[] args){ 
+        launch(args); 
+    } 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">start(Stage primaryStage) </span><span class="s0">throws </span><span class="s1">Exception { 
+</span><span class="s2">//Interfaz</span><span class="s1"> 
+        javafx.scene.control.Button Boton = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Button(</span><span class="s3">&quot;Click Aqui&quot;</span><span class="s1">); 
+        javafx.scene.control.Label Etiqueta = </span><span class="s0">new </span><span class="s1">javafx.scene.control.Label(</span><span class="s3">&quot;Buen Dia&quot;</span><span class="s1">); 
+        Rectangle Rectangulo = </span><span class="s0">new </span><span class="s1">Rectangle(</span><span class="s4">200</span><span class="s1">,</span><span class="s4">400</span><span class="s1">, Color.RED); 
+</span><span class="s2">//Panel</span><span class="s1"> 
+        VBox Layout = </span><span class="s0">new </span><span class="s1">VBox(); 
+        Layout.setPadding(</span><span class="s0">new </span><span class="s1">Insets(</span><span class="s4">10</span><span class="s1">)); 
+        Layout.setSpacing(</span><span class="s4">10</span><span class="s1">); 
+        Layout.getChildren().add(Boton); 
+        Layout.getChildren().add(Etiqueta); 
+        Layout.getChildren().add(Rectangulo); 
+</span><span class="s2">//Mostrar Interfaz</span><span class="s1"> 
+        Scene Escena = </span><span class="s0">new </span><span class="s1">Scene(Layout); 
+        primaryStage.setScene(Escena); 
+        primaryStage.show(); 
+ 
+    } 
+} 
+</span></pre>
+</body>
+</html>
