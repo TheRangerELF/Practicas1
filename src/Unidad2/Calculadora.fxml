@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="440.0" style="-fx-background-color: #C3E6DB;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Unidad2.Calculadora">
+   <children>
+      <TextField alignment="CENTER_RIGHT" editable="false" maxWidth="440.0" onAction="#display" prefHeight="50.0" prefWidth="440.0" style="-fx-background-color: #CFECF0;" text="0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#limpiarTodo" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #828685;" text="Borrar Todo">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#limpiarEntrada" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #828685;" text="Borrar">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#accionBasica" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #34AB34;" text="*">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#agregarDigito" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="7">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#agregarDigito" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="8">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#agregarDigito" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="9">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#accionBasica" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #34AB34;" text="/">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="570.0" spacing="10.0" style="-fx-background-color: #C3E6DB;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="4">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="5">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="6">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#accionBasica" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #34AB34;" text="-">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="1">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="2">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #8CCFDA;" text="3">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#accionBasica" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #34AB34;" text="+">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: #8CCFDA;" text="0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#agregarPunto" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #34AB34;" text=".">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#accionBasica" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #EF0C0C;" text="=">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <Bloom />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
